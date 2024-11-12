@@ -1,1 +1,0 @@
-# egovid.github.io

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="EgoVid-5M: A Large-Scale Video-Action Dataset for Egocentric Video Generation">
+  <meta name="keywords" content="EgoVid">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EgoVid-5M: A Large-Scale Video-Action Dataset for Egocentric Video Generation</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/ms_icon.png">
+
+  <style>  
+    table {  
+      font-family: arial, sans-serif;  
+      border-collapse: collapse;  
+      width: 100%;  
+    }  
+      
+    td, th {  
+      border: 2px solid #F1F4F5;  
+      text-align: left;  
+      padding: 8px;  
+    }  
+    tr:nth-child(3n - 1) {  
+      background-color: #F1F4F5;  
+    }  
+
+    tr:nth-child(3n) {  
+      border: 2px solid #FFFFFF;
+    }  
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">EgoVid-5M: A Large-Scale Video-Action  <br> Dataset for Egocentric Video Generation </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=5IJ0Yg4AAAAJ&hl=en">Xiaofeng Wang</a><sup>1,2,4</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=02H8RBIAAAAJ&hl=en">Kang Zhao</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a >Feng Liu</a><sup>4</sup>,</span>
+            <span class="author-block">
+              <a >Jiayu Wang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a >Guosheng Zhao</a><sup>2,4</sup>,</span>
+              <br> 
+            <span class="author-block">
+              <a >Xiaoyi Bao</a><sup>2,4</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=NmwjI0AAAAAJ&hl=en">Zheng Zhu</a><sup>3</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com.sg/citations?user=16RDSEUAAAAJ&hl=zh-CN">Yingya Zhang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a >Xingang Wang</a><sup>2</sup></span>
+            </span><br>
+
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Institute for Intelligent Computing, Alibaba Group<sup>1</sup>,</span>&nbsp;
+            <br> 
+            <span class="author-block">Institute of Automation, Chinese Academy of Sciences<sup>2</sup>,</span>&nbsp;
+            <br> 
+            <span class="author-block">Tsinghua University<sup>3</sup>,</span>&nbsp;
+            <span class="author-block">University of Chinese Academy of Sciences<sup>4</sup></span>&nbsp;
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/TODO.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Data Link. -->
+              <span class="link-block">
+                <a href="https://github.com/TODO"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Meta Data</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <img id="teaser" autoplay muted loop playsinline height="100%" src="./static/images/abs.png" style="width:100%;height:100%;">
+        <video preload="auto" poster="" id="tree" autoplay controls muted loop width="960px" outline="0px" style="display: inline-block;">
+          <source src="./static/videos/egovid.mp4" type="video/mp4">
+        </video>
+      <p  style="font-size: 16px;"> 
+        EgoVid-5M is a meticulously curated high-quality action-video dataset designed specifically for egocentric video generation. It
+        includes detailed action annotations, such as fine-grained kinematic control and high-level textual descriptions. Furthermore, it incorporates
+        robust data cleaning strategies to ensure frame consistency, action coherence, and motion smoothness under egocentric conditions.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Data Annotation & Cleaning</h2>
+        <div class="content has-text-justified">
+          <p>
+            In order to simulate egocentric videos from actions, we
+          construct detailed and accurate action annotations for each
+          video segment, encompassing low-level kinematic control
+          (e.g., ego-view translation and rotation), as well as high-
+          level textual descriptions. The annotation pipeline is shown
+          in the upper part. Besides, Considering the data quality 
+          significantly influences the effectiveness of training generative models. EgoVid-5M presents a specialized cleaning pipeline
+          specifically designed for egocentric scenarios. The pipeline
+          is illustrated in the lower part.
+          </p>
+          <img id="method" autoplay muted loop playsinline height="100%" src="./static/images/method.png" style="width:100%;height:100%;">
+
+          <p>
+            Below is the data annotation distribution of EgoVid-5M. (a) and (b) describe the quantities of the top 20 verbs and nouns. (c) Text-video action alignment is assessed using the EgoVideo score. (d) and (e) measure the semantic similarity between text and frames and between frames and the first frame using the average CLIP score.
+            (f) Motion smoothness is quantified by the variance of translation and rotation.
+            (g) Motion strength is represented by the average global optical flow.
+            (h) Video clarity is determined by the DOVER score.
+          </p>
+          <img id="method" autoplay muted loop playsinline height="100%" src="./static/images/distribution.png" style="width:100%;height:100%;">
+        </div> 
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Comparison between Different Cleaning Strategies</h2>
+        <div class="content has-text-justified">
+          <p>
+            The video visualization comparison across different data cleaning strategies reveals distinct outcomes Videos generated by strategy-1 fail to 
+            capture local motion and tend to be stationary. In contrast, videos produced
+            by strategy-2 exhibit excessive motion, compromising semantic coherence. Meanwhile, videos generated by strategy-3 effectively model
+            intricate hand movements, striking a balance between motion strength and semantic fidelity.
+          </p>
+          <img id="teaser" src="./static/videos/clean1.gif" style="width:100%; height:100%;" alt="Clean Animation">
+          <img id="teaser" src="./static/videos/clean2.gif" style="width:100%; height:100%;" alt="Clean Animation">
+          <img id="teaser" src="./static/videos/clean3.gif" style="width:100%; height:100%;" alt="Clean Animation">
+        </div> 
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Text Action Driven Video Generation</h2>
+        <div class="content has-text-justified">
+          <div class="gif-container">
+            <img id="teaser1" src="./static/videos/text-driven/1.gif" style="width:49.5%; height:auto;" alt="Clean Animation">
+            <img id="teaser2" src="./static/videos/text-driven/2.gif" style="width:49.5%; height:auto;" alt="Clean Animation">
+        </div>
+          <div class="gif-container">
+            <img id="teaser1" src="./static/videos/text-driven/3.gif" style="width:49.5%; height:auto;" alt="Clean Animation">
+            <img id="teaser2" src="./static/videos/text-driven/4.gif" style="width:49.5%; height:auto;" alt="Clean Animation">
+        </div>
+        <div class="gif-container">
+          <img id="teaser1" src="./static/videos/text-driven/5.gif" style="width:49.5%; height:auto;" alt="Clean Animation">
+          <img id="teaser2" src="./static/videos/text-driven/6.gif" style="width:49.5%; height:auto;" alt="Clean Animation">
+        </div>
+        <div class="gif-container">
+          <img id="teaser1" src="./static/videos/text-driven/7.gif" style="width:49.5%; height:auto;" alt="Clean Animation">
+          <img id="teaser2" src="./static/videos/text-driven/8.gif" style="width:49.5%; height:auto;" alt="Clean Animation">
+        </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Kinematic Action Driven Video Generation</h2>
+        <div class="content has-text-justified">
+          <video preload="auto" poster="" id="tree" autoplay muted loop width="960" style="display: inline-block;">
+            <source src="./static/videos/kinematic-driven/3.mp4" type="video/mp4">
+          </video>
+          <video preload="auto" poster="" id="tree" autoplay muted loop width="960" style="display: inline-block;">
+            <source src="./static/videos/kinematic-driven/4.mp4" type="video/mp4">
+          </video>
+          <video preload="auto" poster="" id="tree" autoplay muted loop width="960" style="display: inline-block;">
+            <source src="./static/videos/kinematic-driven/5.mp4" type="video/mp4">
+          </video>
+          <video preload="auto" poster="" id="tree" autoplay muted loop width="960" style="display: inline-block;">
+            <source src="./static/videos/kinematic-driven/6.mp4" type="video/mp4">
+          </video>
+          <video preload="auto" poster="" id="tree" autoplay muted loop width="960" style="display: inline-block;">
+            <source src="./static/videos/kinematic-driven/7.mp4" type="video/mp4">
+          </video>
+          <video preload="auto" poster="" id="tree" autoplay muted loop width="960" style="display: inline-block;">
+            <source src="./static/videos/kinematic-driven/8.mp4" type="video/mp4">
+          </video>
+        </div> 
+      </div>
+    </div>
+  </div>
+</section>
+
+	
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <p> If you use our work in your research, please cite: </p>
+    <pre><code>@article{wang2023drive,
+  title={DriveDreamer: Towards Real-world-driven World Models for Autonomous Driving},
+  author={Wang, Xiaofeng and Zhu, Zheng and Huang, Guan and Chen, Xinze and Zhu, Jiagang and Lu, Jiwen},
+  journal={arXiv preprint arXiv:2309.09777},
+  year={2023}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/JeffWang987/DriveDreamer" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Website adapted from the following <a href="https://github.com/nerfies/nerfies.github.io">template</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
